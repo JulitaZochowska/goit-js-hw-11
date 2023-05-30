@@ -1,2 +1,12 @@
 @import './common';
 @import './example';
+@import './common';
+@import './example';
+
+.load-more {
+  visibility: collapse;
+
+  &.visible {
+    visibility: visible;
+  }
+}
