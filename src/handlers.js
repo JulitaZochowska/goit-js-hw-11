@@ -6,8 +6,8 @@ let gallery;
 let searchForm;
 
 window.addEventListener('load', function () {
-  loadMoreButton = this.document.querySelector('.load-more');
-  gallery = this.document.querySelector('.gallery');
+  loadMoreButton = document.querySelector('.load-more');
+  gallery = document.querySelector('.gallery');
   searchForm = document.querySelector('#search-form');
 });
 
@@ -17,7 +17,7 @@ let searchQuery;
 function clearGallery() {
   const photoCards = document.querySelectorAll('.photo-card');
 
-  for (i = 0; i < photoCards.length; i++) {
+  for (let i = 0; i < photoCards.length; i++) {
     const photoCard = photoCards[i];
     photoCard.remove();
   }
@@ -28,7 +28,7 @@ function createPhotoCard(hit) {
 }
 
 function loadPictures(hits) {
-  const gallery = this.document.querySelector('.gallery');
+  const gallery = document.querySelector('.gallery');
   hits.forEach(hit => {
     const card = createPhotoCard(hit);
     gallery.innerHTML += card;
