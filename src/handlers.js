@@ -24,7 +24,7 @@ function clearGallery() {
 }
 
 function createPhotoCard(hit) {
-  return `<div class="photo-card"> <img src="${hit.webformatURL}" alt="${hit.tags}" loading="lazy" </img><div class="info"><p class="info-item"><b>Likes</b><br />${hit.likes}</p><p class="info-item"><b>Views</b><br />${hit.views}</p><p class="info-item"><b>Comments</b><br />${hit.comments}</p><p class="info-item"><b>Downloads</b><br />${hit.downloads}</p></div></div>`;
+  return `<div class="photo-card"><figure><img class="pictures" src="${hit.webformatURL}" alt="${hit.tags}" loading="lazy" /><div class="info"><figcaption><p class="info-item"><b>Likes</b><br />${hit.likes}</p><p class="info-item"><b>Views</b><br />${hit.views}</p><p class="info-item"><b>Comments</b><br />${hit.comments}</p><p class="info-item"><b>Downloads</b><br />${hit.downloads}</p></figcaption></div></figure></div>`;
 }
 
 function loadPictures(hits) {
